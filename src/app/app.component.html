@@ -1,0 +1,53 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-2">
+      <button class="btn btn-primary" (click)="login()">
+        login
+      </button>
+    </div>
+    <div class="col-2">
+      <button class="btn btn-primary" (click)="logout()">
+        logout
+      </button>
+    </div>
+
+
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="nav flex-column nav-pills ">
+        <!-- 49 style active router link using routerlinkactiveoptions in angular -->
+        <li class="nav-item">
+          <!-- provide routerLinkActive for active navlinks in order to avoid selection of home when we select other options use [routerLinkActiveOptions]='{exact:true}' -->
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user" routerLinkActive="active">users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['categories']" routerLinkActive="active">categories</a>
+        </li>
+      </ul>
+      <!-- if we user a href the page wil refresh all times -->
+      <!-- <li class="nav-item"><a href="/">home</a></li>
+      <li class="nav-item"><a href="/users">users</a></li>
+      <li class="nav-item"><a href="/categories">categories</a></li> -->
+
+      <!-- replacing it with routerLink to avoid reloading -->
+
+    </div>
+    <!-- <button class="btn btn-primary ">butt</button> -->
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <app-home></app-home>
+        <app-users></app-users>
+        <app-roles></app-roles> -->
+
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
