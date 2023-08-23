@@ -1,0 +1,38 @@
+<p>users works!</p>
+<!-- 49. Navigate between pages using router programmatically in Typescript code in angular -->
+
+<!-- <a routerLink="/categories" routerLinkActive="active" [routerLinkActiveOptions]='{exact: true}'> categories</a>
+ -->
+ <!-- replacing a tag with button -->
+<!-- <div>
+    <button (click)="onCategoriesClick()">categories</button>
+</div>
+
+<div>
+    <a routerLink="/user/anandhu/7" [queryParams]="{location:'kollam',age:23}" [fragment]="'userDetails'">query user</a>
+</div> -->
+
+
+
+
+<!-- 54. Setting up the child or Nested Routes using the children key in routing module in the Angular. -->
+
+<div class=>
+    <ul class="nav flex-column">
+        <!-- 55. Preserve or merge the query parameters by forwarding with queryparamsHandling in Angular. -->
+        <li class="nav-item">
+            <a [routerLink]="['/user',1,'rama']" [queryParams]="{name:'rama', age:23}" class="nav-link">get rama details </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/user',2,'krishna']" [queryParams]="{name:'krishna',age:24}" class="nav-link">get krishna details </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/user',3,'hamsa']" [queryParams]="{name:'hamsa',age:25}" class="nav-link">get hamsa details </a>
+        </li>
+    </ul>
+
+</div>
+
+<div>
+    <router-outlet></router-outlet>
+</div>
